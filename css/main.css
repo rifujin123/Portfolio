@@ -46,7 +46,20 @@ button:hover{
     margin: 0 auto;
     padding: 0 10px;
 }
-
+/* overlay  */
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.4);
+    z-index:4;
+    display:none;
+}
+#overlay.show{
+    display:initial;
+}
 /* ====header==== */
 header{
     position:absolute;
@@ -323,6 +336,125 @@ header{
         order:1;
         width:45%;
         text-align:initial;
+
+    }
+}
+/* work  */
+#works{
+    padding-top:10em;
+    position:relative;
+    overflow-x:hidden;
+}
+#works h2{
+    text-align:center;
+    color:var(--gray);
+}
+.works_dec{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateX(-60%);
+    z-index : -1;
+}
+.works_dec:nth-child(2){
+    position:absolute;
+    top:initial;
+    left:initial;
+    bottom:15%;
+    right: 0;
+    transform:translateX(60%);
+    z-index : -1;
+}
+.works_img-single{
+    margin:2em 0;
+}
+.works_img-single:nth-child(odd) {
+    padding-top:5em;
+}
+.works_img-single:nth-child(3){
+    marrgin-top:-5em;
+}
+.works_btn{
+    text-align:center;
+    margin-top:8em;
+}
+.works_btn button{
+    font-size:1rem;
+}
+@media(min-width:62em){
+    #works h2{
+        margin-bottom:3em;
+
+    }
+    .works_img{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+    .works_img-single{
+        margin:0 5em;
+        width:35%;
+    }
+    .works_img-single:nth-child(3){
+        margin-top:0;
+    }
+}
+
+/* footer  */
+#footer{
+    overflow:hidden;
+    position:relative;
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.footer_img{
+    position:absolute;
+    top:0;
+    right:0;
+    transform:translateX(25%);
+    z-index:-1;
+}
+.footer_heading{
+    max-width:400px;
+    margin:0;
+    text-align:center;
+    color:var(--gray);
+}
+.footer_contact{
+    margin-top:2em;
+    display:flex;
+    justify-content:space-evenly;
+}
+.footer_contact a{
+    text-decoration:none;
+    color:var(--gray);
+}
+
+.footer_dec{
+    position:absolute;
+    bottom:0;
+    left:0;
+    transform:translateX(-45%);
+    z-index:-1;
+}
+
+@media(min-width:62em){
+    .footer_img{
+        top:-15%;
+        right:0;
+        transform:translateX(32%);
+        width:60%;
+    }
+    .footer_heading{
+        text-align:initial;
+        margin:0;
+    }
+    .footer_contact{
+        display:flex;
+        justify-content: space-between;
 
     }
 }
